@@ -10,18 +10,12 @@
         :key="employee.id"
         class="employee-card"
       >
-        <router-link
-          :to="{
-            name: 'EmployeeDetails',
-            params: { id: employee.id },
-          }"
-        >
-          <img
-            :alt="`Picture of ${employee.first_name}`"
-            :src="employee.avatar"
-          />
-          <h3>{{ employee.first_name + " " + employee.last_name }}</h3>
-        </router-link>
+        <img
+          :alt="`Picture of ${employee.first_name}`"
+          :src="employee.avatar"
+        />
+        <h3>{{ employee.first_name + " " + employee.last_name }}</h3>
+
         <a :href="`mailto:${employee.email}`">Contact</a>
       </div>
     </div>
@@ -101,6 +95,7 @@ export default {
 .employee-card h3 {
   border-radius: 10px;
   color: var(--black);
+  pointer-events: none;
 }
 
 .employee-card a {
