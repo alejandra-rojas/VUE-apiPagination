@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import EmployeesView from "../views/Employees/EmployeesView.vue";
-import EmployeeDetails from "../views/Employees/EmployeeDetails.vue";
 import NotFound from "../views/404.vue";
 
 const routes = [
@@ -20,12 +19,6 @@ const routes = [
     path: "/employees",
     name: "Employees",
     component: EmployeesView,
-    props: true,
-  },
-  {
-    path: "/employee/:id",
-    name: "EmployeeDetails",
-    component: EmployeeDetails,
     props: true,
   },
   // 404
